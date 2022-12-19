@@ -1,5 +1,6 @@
 
 import java.util.*;
+import java.util.concurrent.CountDownLatch;
 
 public class OneLoopGreat {
 	static Scanner sc = new Scanner(System.in);
@@ -25,10 +26,11 @@ public class OneLoopGreat {
 	}
 
 	static int[] great(int arr[]) {
-		
-		for (int i = 0; i < arr.length; i++) {
-			if (greatNum[0]>arr[i])
+		int count=0;
+		for (int i = 0; i < arr.length && count<4; i++) {
+			if (greatNum[0]>arr[i]) {
 				greatNum[0]=arr[i];	
+				count++;}
 		}
 		greatNum[1] =greatNum[0];
 		greatNum[2] =greatNum[0];
