@@ -11,7 +11,7 @@ public class SelectionSort2 {
 			System.out.print(arr[i] + " ");
 		}
 
-		System.out.println("\nAscending");
+		System.out.println("\nDecending");
 
 		arr2 = sorting(arr);
 		for (int i = 0; i < arr2.length; i++) {
@@ -19,7 +19,7 @@ public class SelectionSort2 {
 		}
 
 	}
-	//function to make the array in ascending
+	// function to make the array in decending
 
 	static int[] sorting(int[] arr) {
 
