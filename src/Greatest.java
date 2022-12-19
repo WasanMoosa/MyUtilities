@@ -8,10 +8,10 @@ public class Greatest {
 
 	public static void main(String[] args) {
 
-		int[] arr = { -1, -2, -3, 9, 7, 88, -1, 0 };
-		greatNum[0] = arr[0];
-		greatNum[1] = arr[0];
-		greatNum[2] = arr[0];
+		int[] arr = { 100, 1001, 999, 9889, -1, -2, -3, 9, 7, 88, -1, 0, 1000 };
+		greatNum[0] = -1;
+		greatNum[1] = -1;
+		greatNum[2] = -1;
 
 		int[] greatestN = great(arr);
 

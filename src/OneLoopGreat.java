@@ -11,11 +11,11 @@ public class OneLoopGreat {
 
 	public static void main(String[] args) {
 
-		int[] arr = {100, -1, -2, -3, 9, 7, 88, -1, 0 , 999, 8,77,-1,0, 9889, 999};
+		int[] arr = {1000, 900,1001, -1, -2, -3, 9, 7, 88, -1, 0 , 999, 8,77,-1,0, 9889, 999,1001};
 		
-		greatNum[0] = -1999;
-		greatNum[1] = -1999;
-		greatNum[2] = -1999;
+		greatNum[0] = 0;
+		greatNum[1] = 0;
+		greatNum[2] = 0;
 
 		int[] greatestN = great(arr);
 
@@ -25,13 +25,23 @@ public class OneLoopGreat {
 	}
 
 	static int[] great(int arr[]) {
+		
+		for (int i = 0; i < arr.length; i++) {
+			if (greatNum[0]>arr[i])
+				greatNum[0]=arr[i];	
+		}
+		greatNum[1] =greatNum[0];
+		greatNum[2] =greatNum[0];
+		
 
 		for (int i = 0; i < arr.length; i++) {
 
 			if (greatNum[0] < arr[i]) {
+				greatNum[1]=greatNum[0];
 				greatNum[0] = arr[i];
 			}
 			if (greatNum[1] < arr[i] && greatNum[0] != arr[i] ) {
+				greatNum[2] = greatNum[1];
 				greatNum[1] = arr[i];
 		}
 			if (greatNum[2] < arr[i] && greatNum[0] != arr[i] && greatNum[1] != arr[i]) {
