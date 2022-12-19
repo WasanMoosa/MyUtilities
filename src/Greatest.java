@@ -12,6 +12,10 @@ public class Greatest {
 		greatNum[0] = -1;
 		greatNum[1] = -1;
 		greatNum[2] = -1;
+		
+	char u='أ';
+		int o = (int) u;
+		System.out.print(Integer.toHexString(u));
 
 		int[] greatestN = great(arr);
 
