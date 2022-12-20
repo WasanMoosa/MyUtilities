@@ -8,6 +8,7 @@ public class DuplicateNumber {
 
 		for (int i = 0; i < array.length; i++) {
 			stop = false;
+			//Skipping count and print if the number is already counted
 			for (int r = 0; r < i; r++) {
 				if (array[i] == array[r]) {
 

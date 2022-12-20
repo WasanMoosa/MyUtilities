@@ -16,6 +16,8 @@ static int[] array = {101,88,3,65,6,3,0,0,88,88 };
 	}}
 			
 }
+	
+	//To generate HashMap function
 	static HashMap <Integer, Integer> getHash (int arr[]){
 		int index=1;
 		for (int i=0; i<array.length; i++) {

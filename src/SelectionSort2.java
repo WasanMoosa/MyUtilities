@@ -19,7 +19,7 @@ public class SelectionSort2 {
 		}
 
 	}
-	// function to make the array in decending
+	// function to make the array in descending
 
 	static int[] sorting(int[] arr) {
 
