@@ -10,7 +10,7 @@ public class UniqueAlphabet {
 
 		alphabetUnique = alphabetUnique(alphabet);
 
-		System.out.println("The unique letters are");
+		System.out.println("unique letters ");
 		for (Character currentkey : alphabetUnique) {
 			System.out.print(currentkey + " ");
 
@@ -25,20 +25,14 @@ public class UniqueAlphabet {
 			int count = 0;
 			stop = false;
 
-			// Skipping count and print if the number is already counted before
+			// Skipping count and print if the number is already appear before
 			for (int r = 0; r < i; r++) {
 				if (alphabet[i] == alphabet[r]) {
 					stop = true;
 				}
 			}
-			for (int j = i; j < alphabet.length && !stop; j++) {
+			if (!stop) {
 				// Check similarity and increment
-				if (alphabet[i] == alphabet[j]) {
-					count++;
-				}
-			}
-			if (count == 1) {
-
 				alphabetUnique.add(alphabet[i]);
 			}
 
@@ -46,5 +40,4 @@ public class UniqueAlphabet {
 		return alphabetUnique;
 
 	}
-
 }

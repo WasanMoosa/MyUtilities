@@ -8,12 +8,10 @@ public class UnigueAlphabetHash {
 
 		alphabetUnique = alphabetUnique(alphabet);
 		for (Character currentkey : alphabetUnique.keySet()) {
-			
-			//Only print keys which has only one count
-			if (alphabetUnique.get(currentkey) == 1) {
-				System.out.println(currentkey);
 
-			}
+			// Only print keys which has only one count
+
+			System.out.print(currentkey + " ");
 
 		}
 
@@ -24,14 +22,8 @@ public class UnigueAlphabetHash {
 	static HashMap<Character, Integer> alphabetUnique(char[] array) {
 		for (int i = 0; i < alphabet.length; i++) {
 
-			// If the key available, increment the count
-			if (alphabetUnique.containsKey(alphabet[i])) {
-				alphabetUnique.put(alphabet[i], alphabetUnique.get(alphabet[i]) + 1);
+			alphabetUnique.put(alphabet[i], 0);
 
-				// If the key not available, create it
-			} else {
-				alphabetUnique.put(alphabet[i], 1);
-			}
 		}
 		return alphabetUnique;
 	}
