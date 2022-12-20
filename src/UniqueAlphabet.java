@@ -25,14 +25,14 @@ public class UniqueAlphabet {
 			int count = 0;
 			stop = false;
 
-			// Skipping count and print if the number is already appear before
+			// Stop if the number is already appear before
 			for (int r = 0; r < i; r++) {
 				if (alphabet[i] == alphabet[r]) {
 					stop = true;
 				}
 			}
 			if (!stop) {
-				// Check similarity and increment
+				// add unique letters
 				alphabetUnique.add(alphabet[i]);
 			}
 
