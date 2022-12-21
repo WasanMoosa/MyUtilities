@@ -1,4 +1,3 @@
-import java.awt.Checkbox;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -19,10 +18,11 @@ public class MatchSecondApproach {
 					couple[0] = array[i];
 					couple[1] = array[r];
 
+					// Check if the array is already exist in the arraylist
 					same = check(couple, fullCouple);
+					// Add the array of arraylist only if it is not available before
 					if (!same) {
 						fullCouple.add(couple);
-						// System.out.println((fullCouple.get(0)));
 					}
 
 				}
@@ -36,7 +36,8 @@ public class MatchSecondApproach {
 		}
 	}
 
-	static boolean check(Integer [] arr, ArrayList<Integer[]> fullCouple) {
+	// Check if the array is already exist in the arraylist
+	static boolean check(Integer[] arr, ArrayList<Integer[]> fullCouple) {
 		boolean same = false;
 		for (int i = 0; i < fullCouple.size(); i++) {
 			if (fullCouple.get(i)[0] == arr[0] && fullCouple.get(i)[1] == arr[1]) {
