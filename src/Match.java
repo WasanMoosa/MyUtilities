@@ -16,7 +16,6 @@ public class Match {
 					couple[0] = array[i];
 					couple[1] = array[r];
 					if (!fullCouple.contains(Arrays.toString(couple))) {
-						// count;
 						fullCouple.add(Arrays.toString(couple));
 						// System.out.println((fullCouple.get(0)));
 					}
