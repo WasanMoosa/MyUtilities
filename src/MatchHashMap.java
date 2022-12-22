@@ -10,42 +10,34 @@ public class MatchHashMap {
 	public static void main(String[] args) {
 		Integer target = 10;
 		ArrayList<Integer[]> resultStore = new ArrayList<>();
-		
 
-        // Case 1
-        resultStore = getMatchingPairsArrayList(new Integer[] { 6, 6, 6, 4, 4, 4, 4, 6, 6}, target);
-        System.out.println("The pairs are");
-        displayResult(resultStore);
-        
-        // Case 2
-        resultStore = getMatchingPairsArrayList(new Integer[] { 6, 6, 6, 4, 4, 4, 5 }, target);
-        System.out.println("The pairs are");
-        displayResult(resultStore);
-        
-        // Case 3
-        resultStore = getMatchingPairsArrayList(new Integer[] { 3, 7, 5, 5, 2, 8, 9 }, target);
-        System.out.println("The pairs are");
-        displayResult(resultStore);
-        
-        // Case 4
-        resultStore = getMatchingPairsArrayList(new Integer[] { 6, 7, 4, 3, 4, 5, 6 }, target);
-        System.out.println("The pairs are");
-        displayResult(resultStore);
-        
-	
-		//resultStore = getMatchingPairsArrayList(array, target);
+		// Case 1
+		resultStore = getMatchingPairsArrayList(new Integer[] { 6, 6, 6, 4, 4, 4, 4, 6, 6 }, target);
+		System.out.println("The pairs are");
+		displayResult(resultStore);
 
-//		for (Integer[] currentPair : resultStore) {
-//			System.out.println(currentPair[0] + " - " + currentPair[1]);
-//		}
+		// Case 2
+		resultStore = getMatchingPairsArrayList(new Integer[] { 6, 6, 6, 4, 4, 4, 5 }, target);
+		System.out.println("The pairs are");
+		displayResult(resultStore);
+
+		// Case 3
+		resultStore = getMatchingPairsArrayList(new Integer[] { 3, 7, 5, 5, 2, 8, 9 }, target);
+		System.out.println("The pairs are");
+		displayResult(resultStore);
+
+		// Case 4
+		resultStore = getMatchingPairsArrayList(new Integer[] { 6, 7, 4, 3, 4, 5, 6 }, target);
+		System.out.println("The pairs are");
+		displayResult(resultStore);
 
 	}
-	
-	
-	/** This method will process an array of integers, then will generate pairs that
-     * will add up to a specific target.
-     * 
-	 * @param array collection of numbers
+
+	/**
+	 * This method will process an array of integers, then will generate pairs that
+	 * will add up to a specific target.
+	 * 
+	 * @param array  collection of numbers
 	 * @param target Number that would be acquired by adding up a pair.
 	 * @return ArrayList of array
 	 */
@@ -66,11 +58,11 @@ public class MatchHashMap {
 			} else
 				numbers.put(array[i], 1);
 
-			// Print only if find pairs
 			if (temp == array[i] && numbers.get(temp) < 2) {
-				notStop = true;
+				notStop = true; 
 			}
 
+			// Print only if find pairs
 			if (numbers.get(temp) != null && numbers.get(temp) != 0 && numbers.get(array[i]) != 0 && !notStop) {
 				numbers.put(array[i], numbers.get(array[i]) - 1); // Decrement the number of appearance of number
 				numbers.put(temp, numbers.get(temp) - 1); // Decrement the number of appearance of number
@@ -83,7 +75,7 @@ public class MatchHashMap {
 		}
 		return resultStore;
 	}
-	
+
 	private static void displayResult(ArrayList<Integer[]> inputArrayList) {
 		for (Integer[] currentPair : inputArrayList) {
 			System.out.println(currentPair[0] + " - " + currentPair[1]);
