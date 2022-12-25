@@ -1,3 +1,4 @@
+import java.awt.Taskbar.State;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -44,6 +45,13 @@ public class SampleExample {
 		} else {
 			System.out.println("The word " + word + " is not palindrome");
 
+		}
+		System.out.println("======================");
+		// Task 5
+		ArrayList<Integer> fabonacciArrayList = new ArrayList<>();
+		fabonacciArrayList = fabonacci(8);
+		for (Integer numb : fabonacciArrayList) {
+			System.out.println(numb);
 		}
 
 	}
@@ -138,6 +146,29 @@ public class SampleExample {
 		}
 
 		return palindromeCheck;
+	}
+
+	/**
+	 * This Function is calculate the Fabonacci series.
+	 * 
+	 * @return
+	 */
+	public static ArrayList<Integer> fabonacci(int number) {
+		ArrayList<Integer> fabonacciArrayList = new ArrayList<>();
+
+		int state = 1;
+		int result = 0;
+		int temp = 0;
+		for (int i = 0; i < number; i++) {
+
+			fabonacciArrayList.add(result);
+			temp = state;
+			state = result;
+			result = result + temp;
+
+		}
+
+		return fabonacciArrayList;
 	}
 
 	private static void displayResult(HashMap<String, ArrayList<Integer>> evenodd) {
