@@ -27,7 +27,24 @@ public class SampleExample {
 		reverse(sentence);
 
 		// Task 4
+		System.out.print("\n");
+		int result = 0;
+		int num = 5;
 		System.out.println("======================");
+		result = factorialNum(num);
+		System.out.println(num + "! " + " = " + result);
+
+		// Task 4
+		String word = "misim";
+		boolean checker;
+		System.out.println("======================");
+		checker = palindrome(word);
+		if (checker) {
+			System.out.println("The word " + word + " is palindrome");
+		} else {
+			System.out.println("The word " + word + " is not palindrome");
+
+		}
 
 	}
 
@@ -59,7 +76,7 @@ public class SampleExample {
 	}
 
 	/**
-	 * This Function take Hashmaps, and base power.
+	 * This Function take Hashmaps for exponential.
 	 * 
 	 * @return HashMap
 	 */
@@ -88,22 +105,40 @@ public class SampleExample {
 		}
 
 	}
-	
+
 	/**
 	 * This Function calculate the factorial of specific number .
 	 * 
 	 * @return Integer of factorial number
 	 */
-	public static int facturialNum (int number) {
-		int result=0;
-		for (int i=number; i>0; i--) {
-			
-		}
-		
-
-		return 0;
+	public static int factorialNum(int number) {
+		int result = 1;
+		for (int i = number; i > 0; i--) {
+			result = result * i;
 		}
 
+		return result;
+	}
+
+	/**
+	 * This Function check if the word is palindrome.
+	 * 
+	 * @return boolean
+	 */
+	public static boolean palindrome(String word) {
+		boolean palindromeCheck = true;
+		int wordLength = word.length();
+		for (int i = 0; i < (wordLength / 2) && true; i++) {
+			if (word.charAt(i) != word.charAt(wordLength - 1 - i)) {
+
+				palindromeCheck = false;
+
+			}
+
+		}
+
+		return palindromeCheck;
+	}
 
 	private static void displayResult(HashMap<String, ArrayList<Integer>> evenodd) {
 		for (String currentkey : evenodd.keySet()) {
