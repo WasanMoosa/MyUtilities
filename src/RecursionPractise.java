@@ -1,3 +1,5 @@
+import javax.sql.RowSetInternal;
+
 public class RecursionPractise {
 
 	public static void main(String[] args) {
@@ -25,11 +27,12 @@ public class RecursionPractise {
 		// Task 4: palindrome
 		String word = "madama";
 		palindrome(word, word.length(), 0, true);
-		
+
 		System.out.print("\n");
 		System.out.println("--------------");
-		
-		// Task 4: Fabonaki series 
+
+		// Task 4: Fabonaki series
+		fabonacci(7, 0, 1);
 
 	}
 
@@ -105,9 +108,22 @@ public class RecursionPractise {
 
 		return palindrome(word, length, start + 1, check);
 	}
-	
-	/**
-	 * Task 5: Palindrome
-	 */
 
+	/**
+	 * Task 5: Fabonacci Function
+	 */
+	public static int fabonacci(int number, int result, int state) {
+
+		if (number == 0) {
+
+			return 1;
+		}
+		System.out.print(result + " ");
+		int temp = state;
+		state = result;
+		result = result + temp;
+		
+
+		return fabonacci(number-1, result, state);
+	}
 }
